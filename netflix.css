@@ -127,7 +127,67 @@ nav button{
     text-align: center;
     font-size: 18px;
 }
+
 .faq h2{
-    font-weight: 400;
-    font-size: 40px;
+    font-family: sans-serif, Arial;
+    font-weight: 700;
+    font-size: 45px;
 }
+/* questions css style */
+.questions{
+    margin: 40px auto;
+    width: 100%;
+    max-width: 750px;
+
+
+}
+.questions li{
+    list-style: none; /*to remove the style on list leaving the input which is radio*/
+    width: 100%;
+    padding: 5px;
+}
+.questions li label{
+    display: flex; /* this pushes the label to the right*/
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+/* adding the + sign to the box */
+label::after{
+    content: "+"; /* the sign appears immediately after the question*/
+    font-size: 34px;
+    position: absolute;
+    right: 20px; 
+}
+/* css style for input */
+input[type="radio"]{
+    display: none;      /*hides the radio button*/
+}
+/* css style to hide the content */
+.questions .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;  /*by removing the height, the content was hidden*/
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+
+}
+/* css style to content visible when you click on the + sign */
+.questions input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+/* style to change to a close sign(X) */
+.questions input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+   
+
+

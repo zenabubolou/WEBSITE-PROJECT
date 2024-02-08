@@ -15,6 +15,7 @@ body{
     background-position: center;
     padding: 10px 8%;
     position: relative;
+    border-bottom: 6px #303030 solid;
 }
 nav{
     display: flex;
@@ -56,6 +57,7 @@ nav button{
     transform: translate(-50%, -50%);
     text-align: center;
     margin-top: 100px;
+    
 }
 .header-content h1{
     font-size: 60px;
@@ -92,7 +94,7 @@ nav button{
 }
 /* features style */
 .features{
-    padding: 50px 12%;
+    padding: 25px;
     font-size: 22px;
 }
 .rows{
@@ -101,6 +103,7 @@ nav button{
     align-items: center;
     flex-wrap: wrap;
     padding: 50px 0;
+    border-bottom: 6px #303030 solid;
 }
 .text-col{
     flex-basis: 50%;
@@ -126,6 +129,7 @@ nav button{
     padding: 10px 12%;
     text-align: center;
     font-size: 18px;
+    border-bottom: 6px #303030 solid;
 }
 
 .faq h2{
@@ -153,7 +157,7 @@ nav button{
     font-size: 18px;
     font-weight: 500;
     background: #303030;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
     cursor: pointer;
     position: relative;
 }
@@ -186,6 +190,14 @@ input[type="radio"]{
 /* style to change to a close sign(X) */
 .questions input[type="radio"]:checked + label::after{
     transform: rotate(135deg);
+}
+/* small style. since i copied the form from the header same style was applied but was too wide so the re stylng */
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;
 }
 
    

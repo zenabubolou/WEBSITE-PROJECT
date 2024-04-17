@@ -96,14 +96,15 @@ nav button{
 .features{
     padding: 25px;
     font-size: 22px;
+    border-bottom: 6px #303030 solid; 
 }
 .rows{
     display: flex;
     width: 100%;
     align-items: center;
     flex-wrap: wrap;
-    padding: 50px 0;
-    border-bottom: 6px #303030 solid;
+    padding: 50px 30px;
+    
 }
 .text-col{
     flex-basis: 50%;
@@ -126,6 +127,7 @@ nav button{
 
 /* faq style */
 .faq{
+    margin-top: 10px;
     padding: 10px 12%;
     text-align: center;
     font-size: 18px;
@@ -136,10 +138,11 @@ nav button{
     font-family: sans-serif, Arial;
     font-weight: 700;
     font-size: 45px;
+    
 }
 /* questions css style */
 .questions{
-    margin: 40px auto;
+    margin: 30px auto;
     width: 100%;
     max-width: 750px;
 
@@ -195,10 +198,107 @@ input[type="radio"]{
 .faq .email-signup{
     max-width: 600px;
     margin: 20px auto 60px;
-}
+} a
 .faq small{
     font-size: 13px;
 }
+
+/* footer styling */
+
+.footer{
+    padding: 50px;
+    color: #fff;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+}
+.footer .col a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-decoration: none; /*removes the link line from the text*/
+}
+.footer a h2{
+     color: #fff;
+}
+.footer a{
+    text-decoration: none; /*remove link line from h2*/
+}
+.footer .rows{
+    align-items: flex-start; /*so all items will start at same horizontal line*/
+    padding: 15px 0;
+}
+.footer .lang-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.copy-right{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* css media queries for small screen */
+@media screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+    nav .lang-btn{
+        padding: 4px 8px;
+    }
+    .header-content {
+        position: unset;
+        transform: none;
+        padding-top: 150px;    
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .email-signup button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+    .text-col, .img-col{
+        flex-basis: 100%; /*so that it occupies the whole width of the div on small screen*/
+    }
+    .features h2{
+        font-size: 30px; /* to reduce size on small screen*/
+    }
+    .features p{
+        font-size: 15px;
+    }
+    /* media query to make images and text appear in alternate position on small screen */
+    .rows:nth-child(2), .rows:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .features .rows{    /* to reduce spaces between rows*/
+        padding: 10px 0;
+    } 
+    .faq h2{
+        font-size: 17px;
+    }
+    .questions .content{
+        font-size: 14px;
+    } 
+    .questions li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{
+        font-size: 22px; /* reduces the + sign*/
+    }
+}
+
+
+
+
+
 
    
 
